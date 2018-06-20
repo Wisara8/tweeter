@@ -28,12 +28,14 @@ body {
 
  .container {
   width: 450px;
-  height: 100vh;
+  /*height: 100vh;*/
   margin: auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 140px;
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*top: 140px;*/
+  margin-top: 80px;
+  padding-top: 10px;
   bottom: 0;
   background-color: white;
  }
