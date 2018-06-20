@@ -69,5 +69,10 @@
   visibility: hidden;
   float: right;
   margin-top: 17px;
+  padding-right: 20px;
   /*display: inline-block;*/
+}
+
+.tweeted .icons i {
+  padding-right: 10px;
 }

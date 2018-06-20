@@ -19,6 +19,7 @@ body {
   color: #244751;
   background-color: #eee;
   font-family: 'Roboto Condensed', sans-serif;
+  /*overflow: auto;*/
 }
 
 /*
@@ -27,6 +28,7 @@ body {
 
  .container {
   width: 450px;
+  height: 100vh;
   margin: auto;
   position: absolute;
   left: 0;
