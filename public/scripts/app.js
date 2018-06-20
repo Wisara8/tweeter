@@ -98,7 +98,7 @@ $('#document').ready(function(e) {
           method: 'GET',
           success: function (tweetData) {
             // let tweeterData =
-            console.log(tweetData);
+            // console.log(tweetData);
             renderTweets(tweetData);
           }
         });
@@ -118,18 +118,20 @@ $('#document').ready(function(e) {
 
     // 1. Get the data from the from
     let data = $('form').serialize();
-
-    // 2. Make a AJAX request using that data
-    $.ajax('/tweets', {
-      method: 'POST',
-      data: data
-    }).done(function(newTweet) {
-      // console.log(newTweet);
-      // 1. Make the new product show up
-
-      // 2. Clear the form
-      $('form textarea').val('');
-    });
+    if ($('form textarea').val() === '') {
+      alert("Text Area is Empty!");
+    }
+    else if ($('form textarea').val().length > 140) {
+      alert("Too Many Characters!");
+    } else {
+      // 2. Make a AJAX request using that data
+      $.ajax('/tweets', {
+        method: 'POST',
+        data: data
+      }).done(function(newTweet) {
+        $('form textarea').val('');
+      });
+    }
   });
 });
 
