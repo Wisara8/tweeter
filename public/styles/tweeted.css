@@ -1,8 +1,6 @@
 .tweeted {
   opacity: .60;
-  margin-left: 2em;
-  margin-right: 2em;
-  margin-top: 2em;
+  margin: 1em 2em 1em 2em;
   padding-bottom: .5em;
   border-radius: 10px;
 }
@@ -15,43 +13,41 @@
   visibility: visible;
 }
 
-.userPic {
+.tweeted header img {
   width: 40px;
   height: 40px;
   float: left;
   margin-top: 5px;
 }
 
-.username {
+.userHeader h2 {
   line-height: 5px;
   margin-left: 3px;
   display: inline-block;
 }
 
-.userHandle {
+.userHeader p {
   float:right;
   line-height: 14px;
 }
 
-.userHeader {
-  background-color: #eee;
+
+.userHeader, .userFooter {
   padding-left: .5em;
   padding-right: .5em;
+  border: 1px solid;
+}
+
+.userHeader {
+  background-color: #eee;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-top: 1px solid;
+  border-bottom-width: 0px;
 }
 
 .userFooter {
-  padding-left: .5em;
-  padding-right: .5em;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  border-left: 1px solid;
-  border-right: 1px solid;
-  border-bottom: 1px solid;
   border-top: 1px solid #eee;
 }
 
@@ -59,7 +55,7 @@
   display: inline-block;
 }
 
-.userMessage {
+.tweeted div {
   border-left: 1px solid;
   border-right: 1px solid;
   margin: 0;
@@ -69,15 +65,9 @@
   padding-right: 10px;
 }
 
-.icons {
+.tweeted .icons {
   visibility: hidden;
-/*  width: 20px;
-  height: 20px;*/
   float: right;
   margin-top: 17px;
   /*display: inline-block;*/
 }
-
-/*.icons:hover {
-  visibility: visible;
-}*/
