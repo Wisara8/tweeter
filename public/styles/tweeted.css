@@ -1,0 +1,83 @@
+.tweeted {
+  opacity: .60;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+  padding-bottom: .5em;
+  border-radius: 10px;
+}
+
+.tweeted:hover {
+   opacity: 0.99;
+}
+
+.tweeted:hover .icons {
+  visibility: visible;
+}
+
+.userPic {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-top: 5px;
+}
+
+.username {
+  line-height: 5px;
+  margin-left: 3px;
+  display: inline-block;
+}
+
+.userHandle {
+  float:right;
+  line-height: 14px;
+}
+
+.userHeader {
+  background-color: #eee;
+  padding-left: .5em;
+  padding-right: .5em;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-top: 1px solid;
+}
+
+.userFooter {
+  padding-left: .5em;
+  padding-right: .5em;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  border-top: 1px solid #eee;
+}
+
+.userFooter p {
+  display: inline-block;
+}
+
+.userMessage {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.icons {
+  visibility: hidden;
+/*  width: 20px;
+  height: 20px;*/
+  float: right;
+  margin-top: 17px;
+  /*display: inline-block;*/
+}
+
+/*.icons:hover {
+  visibility: visible;
+}*/
