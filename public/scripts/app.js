@@ -13,7 +13,7 @@ $('#document').ready(function(e) {
       let $img = $('<img>').attr('src', tweetData.user.avatars.small);
       $header.append($img);
 
-      let $name = $('<h2>').text(tweetData.user.name); // + tweetData.user.name + '</h2>');
+      let $name = $('<h2>').text(tweetData.user.name);
       $header.append($name);
 
       let $handle = $('<p>').text(tweetData.user.handle);
@@ -97,8 +97,6 @@ $('#document').ready(function(e) {
           url: '/tweets',
           method: 'GET',
           success: function (tweetData) {
-            // let tweeterData =
-            // console.log(tweetData);
             renderTweets(tweetData);
           }
         });
@@ -133,7 +131,7 @@ $('#document').ready(function(e) {
         method: 'POST',
         data: data
       }).done(function(newTweet) {
-        // $('#tweets-container').append(newTweet);
+
         loadTweets();
         $('form textarea').val('')
         $('.counter').html(140);
