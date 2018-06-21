@@ -12,8 +12,8 @@ This project is meant to help bootcamp students practice their HTML, CSS, JS, jQ
 
 ## Final Product
 
-!["URL homepage"](blank)
-!["Update link page"](blank)
+!["Tweeter homepage"](https://github.com/Wisara8/tweeter/blob/master/docs/Tweet%20Home%20Page.png?raw=true)
+!["Compose box"](https://github.com/Wisara8/tweeter/blob/master/docs/Compose%20Box.png?raw=true)
 
 ## Getting Started
 
