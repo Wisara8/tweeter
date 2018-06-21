@@ -35,4 +35,5 @@
 #nav-bar #compose:hover {
   color: teal;
   background-color: #e6fdfd;
+  cursor: pointer;
 }

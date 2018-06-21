@@ -24,9 +24,12 @@ $('#document').ready(function(e) {
       let $div = $('<div>').text(tweetData.content.text);
 
     $tweet.append($div);
-
+      let now = + new Date();
+      //returns readable date in seconds, minutes, etc... with no decimal placest.
+      let ago = humanizeDuration((now - tweetData.created_at), {round: true, largest: 1});
+      console.log(now);
       let $footer = $('<footer>').addClass('userFooter');
-      let $created = $('<p>').text('Created at: ' + tweetData.created_at);
+      let $created = $('<p>').text('Created at: ' + ago);
       $footer.append($created);
 
       let $flagIcon= $('<i>').addClass('fa fa-flag');
