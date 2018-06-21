@@ -9,7 +9,9 @@ $(document).ready(function() {
     let counter = $(this).parent().children(".counter").html(remaining);
     if (remaining < 0) {
       $(counter).addClass('red');
-    }
+    } else {
+      $(counter).removeClass('red');
+    };
   });
 
 });

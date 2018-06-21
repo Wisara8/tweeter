@@ -18,6 +18,8 @@
   height: 40px;
   float: left;
   margin-top: 5px;
+  border-radius: 8px;
+
 }
 
 .userHeader h2 {
@@ -43,6 +45,7 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   border-bottom-width: 0px;
+  padding-bottom: 5px;
 }
 
 .userFooter {

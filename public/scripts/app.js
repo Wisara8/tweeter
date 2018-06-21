@@ -13,31 +13,31 @@ $('#document').ready(function(e) {
       let $img = $('<img>').attr('src', tweetData.user.avatars.small);
       $header.append($img);
 
-    let $name = $('<h2>').text(tweetData.user.name); // + tweetData.user.name + '</h2>');
-    $header.append($name);
+      let $name = $('<h2>').text(tweetData.user.name); // + tweetData.user.name + '</h2>');
+      $header.append($name);
 
-    let $handle = $('<p>').text(tweetData.user.handle);
-    $header.append($handle);
+      let $handle = $('<p>').text(tweetData.user.handle);
+      $header.append($handle);
 
     $tweet.append($header);
 
-    let $div = $('<div>').text(tweetData.content.text);
+      let $div = $('<div>').text(tweetData.content.text);
 
     $tweet.append($div);
 
-    let $footer = $('<footer>').addClass('userFooter');
-    let $created = $('<p>').text('Created at: ' + tweetData.created_at);
-    $footer.append($created);
+      let $footer = $('<footer>').addClass('userFooter');
+      let $created = $('<p>').text('Created at: ' + tweetData.created_at);
+      $footer.append($created);
 
-    let $flagIcon= $('<i>').addClass('fa fa-flag');
-    let $heartIcon= $('<i>').addClass('fa fa-heart');
-    let $retweetIcon= $('<i>').addClass('fa fa-retweet');
-    let $footerIcons = $('<span>').addClass('icons');
+      let $flagIcon= $('<i>').addClass('fa fa-flag');
+      let $heartIcon= $('<i>').addClass('fa fa-heart');
+      let $retweetIcon= $('<i>').addClass('fa fa-retweet');
+      let $footerIcons = $('<span>').addClass('icons');
       $footerIcons.append($flagIcon);
       $footerIcons.append($heartIcon);
       $footerIcons.append($retweetIcon);
 
-    $footer.append($footerIcons);
+      $footer.append($footerIcons);
     $tweet.append($footer);
 
     return $tweet;
@@ -92,7 +92,7 @@ $('#document').ready(function(e) {
   // }
   // ];
 
-  (function loadTweets(tweeted) {
+  function loadTweets() {
     $.ajax({
           url: '/tweets',
           method: 'GET',
@@ -102,16 +102,20 @@ $('#document').ready(function(e) {
             renderTweets(tweetData);
           }
         });
-  })();
+  };
 
   function renderTweets(tweets) {
     tweets.forEach(tweet => {
       var $tweet = createTweetElement(tweet);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
      })
   };
 
-  // renderTweets(tweetData);
+  $('#compose').on('click', function(e) {
+    $('.new-tweet').slideToggle("slow", function() {
+      $('.textField').focus();
+    });
+  });
 
   $('form').on('submit', function(e) {
     e.preventDefault();
@@ -129,9 +133,14 @@ $('#document').ready(function(e) {
         method: 'POST',
         data: data
       }).done(function(newTweet) {
-        $('form textarea').val('');
+        // $('#tweets-container').append(newTweet);
+        loadTweets();
+        $('form textarea').val('')
+        $('.counter').html(140);
       });
     }
   });
+
+  loadTweets();
 });
 
