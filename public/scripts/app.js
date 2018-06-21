@@ -97,6 +97,8 @@ $('#document').ready(function(e) {
           url: '/tweets',
           method: 'GET',
           success: function (tweetData) {
+            // let tweeterData =
+            // console.log(tweetData);
             renderTweets(tweetData);
           }
         });
