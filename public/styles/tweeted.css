@@ -14,12 +14,19 @@
 }
 
 .tweeted header img {
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   float: left;
   margin-top: 5px;
   border-radius: 8px;
 
+}
+
+@media (min-device-width: 420px) {
+  .tweeted header img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .userHeader h2 {
