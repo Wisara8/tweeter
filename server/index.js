@@ -24,16 +24,6 @@ MongoClient.connect(MONGODB_URI, (err, client) => {
 
   const db = client.db('tweeter');
 
-  // db.collection("tweeter").find().toArray(callback);
-
-
-  // getTweets((err, tweets) => {
-  //   if (err) throw err;
-
-  //   console.log("Logging each tweet:");
-  //   for (let tweet of tweets) {
-  //     console.log(tweet);
-  //   }
 // The in-memory database of tweets. It's a basic object with an array in it.
 // const db = require("./lib/in-memory-db");
 
